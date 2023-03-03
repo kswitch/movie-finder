@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+}
+html {
+    /* Replace background color with an image */
+    background-color: grey;
+}
+body {
+    margin: 0 auto;
+    box-shadow: 1px 1px 5px black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgba(0, 0, 0, 0.837);
+}
+header {
+    /* Replace background color with an image */
+    background-color: rgb(34, 51, 51); 
+    height: 10rem;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    width: max-content;
+    gap: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#find-film-or-my-watchlist {
+    font-size: 8.5vmin;
+    font-weight: bolder; 
+    letter-spacing: 0.1rem;
+}
+#search-or-watchlist {
+    font-size: 3.5vmin;
+    cursor: pointer;
+}
+#find-film-or-my-watchlist, #search-or-watchlist {
+    align-self: center;
+    color: white;
+}
+main {
+    position: relative;
+    min-height: 75vh;
+    background-color: white;
+}
+.search {
+    position: absolute;
+    top: -2rem;
+    left: 0rem;
+    right: 7rem;
+    transform: translate(10%, 50%);
+
+    height: 2rem;
+    width: max-content;
+    margin: 0 auto;
+}
+.search-text {
+    outline: none;
+    padding-left: 1rem;
+    width: 50vw;
+    border: 1px solid rgba(137, 134, 134, 0.383);
+    border-top-left-radius: 0.3rem;
+    border-bottom-left-radius: 0.3rem;
+}
+.search-btn {
+    margin: auto auto auto -0.4rem;
+    width: min-content;
+    padding: 0 2rem;
+    border: 1px solid rgba(137, 134, 134, 0.383);
+    border-top-right-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+}
+.search-text, .search-btn {
+    height: 100%;
+    align-self: center;
+}
+.search-results, .more-movie-info, .my-watchlist {
+    padding-top: 2.5rem;
+}
+.results {
+    display: flex;
+    max-width: 90%;
+    margin: 0 auto;
+    border-bottom:  1px solid rgba(0, 0, 0, 0.314);
+    padding: 1rem 0rem;
+}
+.watchlist {
+    max-width: 100%;
+    padding: 0.5rem 0 0.5rem 0;
+}
+.my-watchlist {
+    padding-bottom: 2rem;
+}
+.result-is-false, .initial-page {
+    color: rgb(223, 221, 221);
+    max-width: 70%;
+    font-size: 1rem;
+    font-weight: bolder;
+    text-align: center;
+    margin: 0 auto;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+}
+.initial-page {
+    top: 50%;
+}
+.movie-poster-img {
+    max-width: 5.5rem;
+    display: block;
+}
+.movie-info {
+    padding-left: 0.5rem;
+    column-gap: 1rem;
+}
+.movie-poster-img, .movie-info {
+    align-self: center;
+}
+.movie-title-header {
+    display: flex;
+    gap: 2rem;
+    font-size: 4vmin;
+}
+.movie-title, .movie-poster-img, 
+.go-back, .search-btn, #search-or-watchlist,
+.add-rem-watchlist {
+    cursor: pointer;
+}
+.movie-title, .movie-imdb-rating {
+    align-self: center;
+}
+.extra-movie-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 3vmin;
+    gap: 0.5rem;
+}
+.extra-movie-info,.movie-plot {
+    padding-top: 0.5rem;
+}
+.movie-runtime, .movie-genre {
+    align-self: center;
+}
+.movie-plot, .movie-release {
+    font-size: 3vmin;
+}
+.add-rem-watchlist {
+    background-color: white;
+    border: none;
+    font-size: 3vmin;
+}
+.watchlist-span{
+    background-color: black;
+    font-weight: bold;
+    color: white;
+    border-radius: 50%;
+}
+
+.go-back {
+    padding-bottom: 1rem;
+}
+.more-movie-info, .my-watchlist {
+    display: none;
+    width: 90%;
+    margin: 0 auto;
+}
+.more-movie-info-header {
+    padding-left: 1rem;
+    line-height: 1.2rem;
+}
+.more-movie-info-body {
+    width: 100%;
+}
+.more-movie-info-body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    /* justify-content: space-around; */
+    column-gap: 1rem;
+    padding-top: 1rem;
+}
+.more-movie-info-body div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 1rem;
+    width: 100%;
+}
+.bold-text {
+    font-size: 0.85rem;
+}
+.more-movie-info-body img {
+    display: block;
+    max-height: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.more-movie-info-body img, .more-movie-info-body div {
+    align-self: center;
+}
+.more-movie-info-body-plot {
+    font-size: 0.8rem;
+}
+.more-movie-info-body-plot:last-child {
+    padding-bottom: 2rem;
+    line-height: 1rem;
+}
+footer {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+@media (max-width: 281px) {
+    .search {
+    left: -0.5rem;
+    }
+}
+@media (min-width: 282px) {
+    .search {
+    left: -0.4rem;
+    }
+}
+@media (min-width: 301px) {
+    .search {
+    left: -0.2rem;
+    }
+}
+@media (min-width: 321px) {
+    .search {
+    left: 0rem;
+    }
+}
+@media (min-width: 341px) {
+    .search {
+    left: 0.2rem;
+    }
+}
+@media (min-width: 361px) {
+    .search {
+    left: 0.4rem;
+    }
+}
+@media (min-width: 381px) {
+    .search {
+    left: 0.6rem;
+    }
+}
+@media (min-width: 401px) {
+    .search {
+    left: 0.9rem;
+    }
+}
+@media (min-width: 421px) {
+    .search {
+    left: 1rem;
+    }
+}
+@media (min-width: 480px) {
+    .header {
+        flex-direction: row;
+        width: 85%;
+    }  
+    body {
+        width: 90vw;
+        max-width: 900px;
+    }
+    #find-film-or-my-watchlist {
+        font-size: 6.5vmin;
+    }
+    #search-or-watchlist {
+        font-size: 2.3vmin;
+    }
+    .search {
+    left: 0rem;
+    }
+    .movie-info {
+        padding-left: 1rem;
+    }
+    .add-rem-watchlist {
+        font-size: 0.8rem;
+    }
+    .movie-title-header {
+        font-size: 1.5rem;
+    }
+    .extra-movie-info {
+        max-width: 25rem;
+    }
+    .extra-movie-info, .movie-release {
+        font-size: 0.8rem;
+    }
+    .movie-plot{
+        font-size: 0.9rem;
+    }
+}
+@media (min-width: 700px) {
+    .more-movie-info-div {
+        padding-bottom: 3.5rem;
+    }
+}
+@media (min-width: 900px) {
+    #find-film-or-my-watchlist {
+        font-size: 2.85rem;
+    }
+    #search-or-watchlist {
+        font-size: 1.1rem;
+    }
+    .search-text {
+        width: 28rem; 
+    }   
+}
